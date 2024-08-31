@@ -1,4 +1,4 @@
-def evaluate_expression(expression):
+def calculate(expression):
     try:
         # Filtrar la expresión para permitir solo caracteres válidos
         allowed_operators = "+-*/()"
@@ -20,7 +20,7 @@ def main():
             if user_input.strip().lower() == 'c':
                 continue
             
-            result = evaluate_expression(user_input)
+            result = calculate(user_input)
             print(result)
             
         except Exception as e:
