@@ -1,22 +1,17 @@
-
-
-def multiply( a, b):
-    return a * b
-
-def add(x, y):
-    return x + y
-
-def divide(x, y):
-    if y != 0:
-        return x / y
-    else:
-        return "Error:  División por      cero"
-def subtract(a, b):
-    return a - b
+def evaluate_expression(expression):
+    try:
+        # Filtrar la expresión para permitir solo caracteres válidos
+        allowed_operators = "+-*/()"
+        filtered_expression = ''.join(c for c in expression if c in allowed_operators or c.isdigit() or c.isspace())
+        # Evaluar la expresión
+        result = eval(filtered_expression)
+        return result
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 def main():
     print("Calculadora en línea de comandos")
-    print("Escribe la operación (por ejemplo, 2 + 2) y presiona Enter")
+    print("Escribe la operación (por ejemplo, 2 + (2 + 2)) y presiona Enter")
     print("Presiona 'c' para borrar la operación")
     
     while True:
@@ -25,21 +20,9 @@ def main():
             if user_input.strip().lower() == 'c':
                 continue
             
-            parts = user_input.split()
-            if len(parts) != 3:
-                print("Operación inválida. Usa el formato 'a operador b'")
-                continue
+            result = evaluate_expression(user_input)
+            print(result)
             
-            a = float(parts[0])
-            operator = parts[1]
-            b = float(parts[2])
-            
-            if operator == '-':
-                print(subtract(a, b))
-            else:
-                print("Operador no reconocido. Usa '+', '-', '*' o '/'")
-        except ValueError:
-            print("Entrada inválida. Asegúrate de usar números y operadores válidos.")
         except Exception as e:
             print(f"Ocurrió un error: {e}")
 
