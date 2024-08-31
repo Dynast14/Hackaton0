@@ -1,6 +1,6 @@
-import pytest
+import unittest
 
-from main import calculate
+from main import evaluate_expression
 
 
 class TestCalculator(unittest.TestCase):
@@ -150,4 +150,4 @@ class TestCalculator(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    pytest.main()
+    unittest.main()
