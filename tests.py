@@ -1,5 +1,5 @@
 import pytest
-from calculator import evaluate_expression  # Asegúrate de importar la función desde el módulo correcto
+from main import evaluate_expression  # Asegúrate de importar la función desde el módulo correcto
 
 def test_simple_addition():
     assert evaluate_expression("2 + 2") == 4
