@@ -4,3 +4,6 @@ Soy un desarrollador apasionado por la tecnología y me encanta trabajar en proy
 
 Nombre: Rolando david diaz jara
 Buenas tardes, espero aprender mucho en este curso de DBP
+
+Nombre: Franco Stefano Panizo Muñoz
+Estudiante CSS
