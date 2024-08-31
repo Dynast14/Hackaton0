@@ -1,4 +1,11 @@
+def add(x, y):
+    return x + y
 
+def divide(x, y):
+    if b != 0:
+        return x / y
+    else:
+        return "Error:  División por      cero"
 def subtract(a, b):
     return a - b
 
@@ -33,4 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
