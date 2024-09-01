@@ -1,13 +1,15 @@
 def calculate(expression):
     try:
         # Filtrar la expresión para permitir solo caracteres válidos
-        allowed_operators = "+-*/()"
+        allowed_operators = "+-*/()."
         filtered_expression = ''.join(c for c in expression if c in allowed_operators or c.isdigit() or c.isspace())
         # Evaluar la expresión
         result = eval(filtered_expression)
         return result
-    except Exception as e:
-        return f"Error: {str(e)}"
+    except ZeroDivisionError:
+        raise ZeroDivisionError("División por cero.")
+    except (SyntaxError, ValueError) as e:
+        raise ValueError(f"Error: {str(e)}")
 
 def main():
     print("Calculadora en línea de comandos")
