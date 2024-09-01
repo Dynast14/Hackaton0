@@ -81,7 +81,7 @@ class TestCalculator(unittest.TestCase):
             calculate("5 + a")
 
     def test_complex_operation_1(self):
-        self.assertEqual(calculate("3 + 5 * 2 - 8 / 4"), 9)
+        self.assertEqual(calculate("3 + 5 * 2 - 8 / 4"), 11)
 
     def test_complex_operation_2(self):
         self.assertEqual(calculate("10 + 2 * 6 / (4 - 2)"), 16)
@@ -131,7 +131,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculate("-5.5 - 2.5"), -8.0)
 
     def test_negative_decimal_multiplication(self):
-        self.assertEqual(calculate("-2.2 * 3.0"), -6.6)
+        self.assertEqual(calculate("-2.2 * 3.0"), -6.6 )
 
     def test_negative_decimal_division(self):
         self.assertEqual(calculate("-7.5 / 2.5"), -3.0)
